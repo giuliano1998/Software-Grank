@@ -11,9 +11,12 @@ export async function handleSmoobuWebhook(req, res) {
 
     log('Received Smoobu Webhook', payload);
 
+    // Validación básica
     if (!payload || !payload.id) {
       log('Invalid Smoobu Webhook Payload', payload);
-      return res.status(400).json({ success: false, error: 'Invalid payload' });
+      return res
+        .status(400)
+        .json({ success: false, error: 'Invalid payload: missing id' });
     }
 
     // Map Smoobu → Airtable
@@ -36,9 +39,10 @@ export async function handleSmoobuWebhook(req, res) {
       success: true,
       airtableRecord: result,
     });
-
   } catch (error) {
     log('Smoobu Webhook Handler Error', error);
-    return res.status(500).json({ success: false, error: error.message });
+    return res
+      .status(500)
+      .json({ success: false, error: error.message || 'Internal error' });
   }
 }
