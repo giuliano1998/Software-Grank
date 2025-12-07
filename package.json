@@ -1,0 +1,17 @@
+{
+  "name": "software-grank",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "node tests/smoobuToAirtable.test.js"
+  },
+  "dependencies": {
+    "airtable": "^0.12.2",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

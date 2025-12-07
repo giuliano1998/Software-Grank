@@ -1,0 +1,13 @@
+{
+  "id": 119719486,
+  "firstname": "John",
+  "lastname": "Doe",
+  "channelName": "Demo Channel",
+  "apartmentId": 2,
+  "arrival": "2024-08-10",
+  "departure": "2024-08-15",
+  "adults": 2,
+  "children": 0,
+  "email": "john.doe@example.com",
+  "phone": "+34987654321"
+}
